@@ -106,7 +106,7 @@ info_option() {
 	#
 	# Derivados de Debian y Red Hat
 	#
-	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux* | *Rocky*)
+	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux* | *Rocky* | *rch*)
 	echo "=================================="
     echo "      INFORMACION DEL EQUIPO      "
     echo "=================================="
@@ -196,7 +196,7 @@ users_option() {
 	#
 	# Derivados de Debian y Red Hat
 	#
-	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux* | *Rocky*)
+	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux* | *Rocky* | *rch*)
     awk -F: '{ print $1}' /etc/passwd
     echo
     ;;
@@ -242,7 +242,7 @@ arp_cache_option() {
 	#
 	# Derivados de Debian y Red Hat
 	#
-	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux* | *Rocky*)
+	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux* | *Rocky* | *rch*)
     arp
     echo
     ;;
@@ -288,7 +288,7 @@ connections_option() {
 	#
 	# Derivados de Debian y Red Hat
 	#
-	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux* | *Rocky*)
+	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux* | *Rocky* | *rch*)
     netstat -tuln
     echo
     ;;
@@ -331,7 +331,7 @@ update_option() {
 	echo
 
     case $os in
-    # Archi Linux
+    # Arch Linux
 	*rch*)
 	echo "Actualizando Sistema..."
 	echo
