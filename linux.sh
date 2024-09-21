@@ -428,6 +428,16 @@ deldns_option() {
 	echo
 
     case $os in
+	# Arch Linux
+	*rch*)
+	echo "Limpiando caches..."
+	echo
+	sudo pacman -Qdt
+	echo
+	sudo pacman $(pacman -Qdtq)
+	echo
+	;;
+
 	#
 	# Derivados de Debian
 	#
