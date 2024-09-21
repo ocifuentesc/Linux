@@ -13,7 +13,7 @@
 ## @copyright	Copyright © 2024 Oscar Cifuentes Cisterna
 ## @license	https://wwww.gnu.org/licenses/gpl.txt
 ## @email	oscar@ocifuentesc.cl
-## @web		https://ocifuentesc.cl
+## @web		https://oscarcifuentes.cl
 ## @github	https://github.com/ocifuentesc
 ##
 ##
@@ -31,6 +31,10 @@
 # - CentOS 9 Stream ARM64
 # - CentOS 10 Stream ARM64
 # - Alma Linux 9.4 ARM
+# - Fedora Server 39 ARM
+# - Fedora Server 40 ARM
+# - Fedora Workstation 40 ARM
+# - Rocky Linux 9.4 ARM
 
 # Función para mostrar el menú
 show_menu() {
@@ -102,7 +106,7 @@ info_option() {
 	#
 	# Derivados de Debian y Red Hat
 	#
-	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux*)
+	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux* | *Rocky*)
 	echo "=================================="
     echo "      INFORMACION DEL EQUIPO      "
     echo "=================================="
@@ -192,7 +196,7 @@ users_option() {
 	#
 	# Derivados de Debian y Red Hat
 	#
-	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux*)
+	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux* | *Rocky*)
     awk -F: '{ print $1}' /etc/passwd
     echo
     ;;
@@ -238,7 +242,7 @@ arp_cache_option() {
 	#
 	# Derivados de Debian y Red Hat
 	#
-	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux*)
+	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux* | *Rocky*)
     arp
     echo
     ;;
@@ -284,7 +288,7 @@ connections_option() {
 	#
 	# Derivados de Debian y Red Hat
 	#
-	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux*)
+	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux* | *Rocky*)
     netstat -tuln
     echo
     ;;
@@ -364,7 +368,7 @@ update_option() {
     #
     # Derivados de Red Hat
     #
-    *CentOS*| *Fedora* | *lmaLinux*)
+    *CentOS*| *Fedora* | *lmaLinux* | *Rocky*)
     # Actualizamos la lista de paquetes disponibles y sus versiones en los repositorios
 	echo "Descargando Lista de Repositorios..."
 	echo
@@ -443,7 +447,7 @@ deldns_option() {
     #
     # Derivados de Red Hat
     #
-    *CentOS*| *Fedora* | *lmaLinux*)
+    *CentOS*| *Fedora* | *lmaLinux* | *Rocky*)
     echo "Limpiando caché de APT..."
     sudo yum clean all
     sudo rm -rf /var/cache/yum
