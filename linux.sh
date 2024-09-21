@@ -22,7 +22,15 @@
 ## Sistemas Operativos Testeados ##
 ###################################
 #
-# - Kali Linux 2024 AMD64
+# - Kali Linux 2024 ARM64
+# - Debian 10 ARM64
+# - Debian 11 ARM64
+# - Debian 12 ARM64
+# - Ubuntu Server 20.04 ARM64
+# - Ubuntu Server 24.04 ARM64
+# - CentOS 9 Stream ARM64
+# - CentOS 10 Stream ARM64
+# - Alma Linux 9.4 ARM
 
 # Función para mostrar el menú
 show_menu() {
@@ -94,7 +102,7 @@ info_option() {
 	#
 	# Derivados de Debian y Red Hat
 	#
-	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora*)
+	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux*)
 	echo "=================================="
     echo "      INFORMACION DEL EQUIPO      "
     echo "=================================="
@@ -184,7 +192,7 @@ users_option() {
 	#
 	# Derivados de Debian y Red Hat
 	#
-	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora*)
+	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux*)
     awk -F: '{ print $1}' /etc/passwd
     echo
     ;;
@@ -230,7 +238,7 @@ arp_cache_option() {
 	#
 	# Derivados de Debian y Red Hat
 	#
-	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora*)
+	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux*)
     arp
     echo
     ;;
@@ -276,7 +284,7 @@ connections_option() {
 	#
 	# Derivados de Debian y Red Hat
 	#
-	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora*)
+	*Debian* | *Ubuntu* | *Kali* | *CentOS*| *Fedora* | *lmaLinux*)
     netstat -tuln
     echo
     ;;
@@ -356,7 +364,7 @@ update_option() {
     #
     # Derivados de Red Hat
     #
-    *CentOS*| *Fedora*)
+    *CentOS*| *Fedora* | *lmaLinux*)
     # Actualizamos la lista de paquetes disponibles y sus versiones en los repositorios
 	echo "Descargando Lista de Repositorios..."
 	echo
@@ -435,7 +443,7 @@ deldns_option() {
     #
     # Derivados de Red Hat
     #
-    *CentOS*| *Fedora*)
+    *CentOS*| *Fedora* | *lmaLinux*)
     echo "Limpiando caché de APT..."
     sudo yum clean all
     sudo rm -rf /var/cache/yum
