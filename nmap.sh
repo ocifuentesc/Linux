@@ -34,45 +34,45 @@ RESET="\033[0m"
 nmap_option() {
         clear
 		echo
-        echo -e "${VERDE}${NEGRITA}=============================================================="
+        echo -e "${VERDE}=============================================================="
         echo -e "|                           MENU NMAP                        |"
         echo -e "==============================================================${RESET}"
         echo
-        echo -e "${VERDE}${NEGRITA}  1. Barrido de Ping (-sn)${RESET}"
+        echo -e "${VERDE}  1. Barrido de Ping (-sn)${RESET}"
         echo -e "${NEGRITA}     Nota: Identificar hosts activos en la red. No hace análisis de puertos posterior${RESET}"
         echo
-        echo -e "${VERDE}${NEGRITA}  2. No Ping (-Pn)${RESET}"
+        echo -e "${VERDE}  2. No Ping (-Pn)${RESET}"
         echo -e "${NEGRITA}     Nota: Pasa directo al escaneo de puertos${RESET}"
         echo
-        echo -e "${VERDE}${NEGRITA}  3. Solo lista equipos (-sL)${RESET}"
+        echo -e "${VERDE}  3. Solo lista equipos (-sL)${RESET}"
         echo -e "${NEGRITA}     Nota: Lista equipos y con resolucion inversa DNS${RESET}"
         echo
-        echo -e "${VERDE}${NEGRITA}  4. Ping ICMP (-PP)${RESET}"
+        echo -e "${VERDE}  4. Ping ICMP (-PP)${RESET}"
         echo -e "${NEGRITA}     Nota: Identificar hosts activos en la red mediante un ICMP Timestamp Request${RESET}"
         echo
-        echo -e "${VERDE}${NEGRITA}  5. Escanear puerto y deteccion de version y sistema operativo (-O -sV -p)${RESET}"
+        echo -e "${VERDE}  5. Escanear puerto y deteccion de version y sistema operativo (-O -sV -p)${RESET}"
         echo -e "${NEGRITA}     Nota: Escaneo de un simple puerto o un rango de ellos."
         echo -e "     Detecta la version de los puertos e identifica el sistema operativo.${RESET}"
         echo
-        echo -e "${VERDE}${NEGRITA}  6. Escaneo TCP (-sT)(*)${RESET}"
+        echo -e "${VERDE}  6. Escaneo TCP (-sT)(*)${RESET}"
         echo -e "${NEGRITA}     Nota: Determinar el estado de un puerto (abierto, cerrado o filtrado).${RESET}"
         echo
-        echo -e "${VERDE}${NEGRITA}  7. Escaneo SYN (-sS)(*)${RESET}"
+        echo -e "${VERDE}  7. Escaneo SYN (-sS)(*)${RESET}"
         echo -e "${NEGRITA}     Nota: Escaneo sigiloso y mas rapido que el TCP${RESET}"
         echo
-        echo -e "${VERDE}${NEGRITA}  8. Escaneo UDP Rapido (-sU -F) (*)${RESET}"
+        echo -e "${VERDE}  8. Escaneo UDP Rapido (-sU -F) (*)${RESET}"
         echo -e "${NEGRITA}     Nota: Se escanea los primeros 100 puertos.${RESET}"
         echo
-        echo -e "${VERDE}${NEGRITA}  9. Escaneo UDP (-sU) (*)${RESET}"
+        echo -e "${VERDE}  9. Escaneo UDP (-sU) (*)${RESET}"
         echo -e "${NEGRITA}     Nota: Se escanea todo los puertos UDP. Puerde tardar varias horas${RESET}"
         echo
-        echo -e "${VERDE}${NEGRITA} 10. Escaneo de vulnerabilidades (-sV --script=vulners)${RESET}"
+        echo -e "${VERDE} 10. Escaneo de vulnerabilidades (-sV --script=vulners)${RESET}"
         echo -e "${NEGRITA}     Nota: Utiliza la base de datos de vulnerabilidades junto con la deteccion"
         echo -e "     de versiones de software${RESET}"
 		echo
-        echo -e "${VERDE}${NEGRITA}  0.  Volver al Menú Principal${RESET}"
+        echo -e "${VERDE}  0.  Volver al Menú Principal${RESET}"
 		echo
-        echo -e "${VERDE}${NEGRITA}==================================================${RESET}"
+        echo -e "${VERDE}==================================================${RESET}"
 		echo
         read -p $'\e[1;32mIngrese una opción (0-10): \e[0m' opcionnmap
 
