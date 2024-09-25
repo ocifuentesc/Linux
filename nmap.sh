@@ -29,12 +29,13 @@
 nmap_option() {
         clear
 		echo
-        echo "========================"
-        echo "      MENU NMAP"
-        echo "========================"
+        echo "=================================================="
+        echo "                  MENU NMAP"
+        echo "=================================================="
 		echo
         echo -e "\e[1;32m  1. Barrido de Ping (-sn)\e[0m"
-        echo -e " \e[1;39mNota: Identificar hosts activos en la red. No hace análisis de puertos posterior\e[0m"
+        echo -e " \e[1;39mNota: Identificar hosts activos en la red. 
+                    No hace análisis de puertos posterior\e[0m"
         echo
         echo -e "\e[1;32m  2. No Ping (-Pn)\e[0m"
         echo -e " \e[1;39mNota: Pasa directo al escaneo de puertos\e[0m"
@@ -43,10 +44,14 @@ nmap_option() {
         echo -e "\e[1;39mNota: Lista equipos y hace resolucion inversa DNS\e[0m"
         echo
         echo -e "\e[1;32m  4. Ping ICMP (-PP)\e[0m"
-        echo -e " \e[1;39mNota: Identificar hosts activos en la red mediante un ICMP Timestamp Request\e[0m"
+        echo -e " \e[1;39mNota: Identificar hosts activos en la red mediante 
+                    un ICMP Timestamp Request\e[0m"
         echo
-        echo -e "\e[1;32m  2. Escanear puerto y deteccion de version y sistema operativo (-O -sV -p)\e[0m"
-        echo -e " \e[1;39mNota: Escaneo de un simple puerto o un rango de ellos, ademas, detecta la version de los puertos e identifica el sistema operativo.\e[0m"
+        echo -e "\e[1;32m  2. Escanear puerto y deteccion de version y 
+                sistema operativo (-O -sV -p)\e[0m"
+        echo -e " \e[1;39mNota: Escaneo de un simple puerto o un rango de 
+                ellos, ademas, detecta la version de los puertos e 
+                identifica el sistema operativo.\e[0m"
         echo
         echo "1.  Deteccion Sistema Operativo (-O)"
         echo "1.  Evadir Firewall / IDS (-f)"
