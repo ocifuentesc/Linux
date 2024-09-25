@@ -34,8 +34,7 @@ nmap_option() {
         echo -e "==================================================\e[0m"
         echo
         echo -e "\e[1;32m  1. Barrido de Ping (-sn)\e[0m"
-        echo -e "\e[1;39m  Nota: Identificar hosts activos en la red."
-        echo -e "No hace análisis de puertos posterior\e[0m"
+        echo -e "\e[1;39m  Nota: Identificar hosts activos en la red. No hace análisis de puertos posterior\e[0m"
         echo
         echo -e "\e[1;32m  2. No Ping (-Pn)\e[0m"
         echo -e "\e[1;39m  Nota: Pasa directo al escaneo de puertos\e[0m"
@@ -44,13 +43,11 @@ nmap_option() {
         echo -e "\e[1;39m  Nota: Lista equipos y con resolucion inversa DNS\e[0m"
         echo
         echo -e "\e[1;32m  4. Ping ICMP (-PP)\e[0m"
-        echo -e "\e[1;39m  Nota: Identificar hosts activos en la red mediante"
-        echo -e "un ICMP Timestamp Request\e[0m"
+        echo -e "\e[1;39m  Nota: Identificar hosts activos en la red mediante un ICMP Timestamp Request\e[0m"
         echo
-        echo -e "\e[1;32m  5. Escanear puerto y deteccion de version y"
-        echo -e "sistema operativo (-O -sV -p)\e[0m"
+        echo -e "\e[1;32m  5. Escanear puerto y deteccion de version y sistema operativo (-O -sV -p)\e[0m"
         echo -e "\e[1;39m  Nota: Escaneo de un simple puerto o un rango de ellos."
-        echo -e "Detecta la version de los puertos e identifica el sistema operativo.\e[0m"
+        echo -e "   Detecta la version de los puertos e identifica el sistema operativo.\e[0m"
         echo
         echo -e "\e[1;32m  6. Escaneo TCP (-sT)(*)\e[0m"
         echo -e "\e[1;39mNota: Determinar el estado de un puerto (abierto, cerrado o filtrado).\e[0m"
@@ -65,14 +62,13 @@ nmap_option() {
         echo -e "\e[1;39mNota: Se escanea todo los puertos UDP. Puerde tardar varias horas\e[0m"
         echo
         echo -e "\e[1;32m  10. Escaneo de vulnerabilidades (-sV --script=vulners)\e[0m"
-        echo -e "\e[1;39mNota: Utiliza la base de datos de vulnerabilidades junto con la"
-        echo -e "deteccion de versiones de software\e[0m"
+        echo -e "\e[1;39mNota: Utiliza la base de datos de vulnerabilidades junto con la deteccion de versiones de software\e[0m"
 		echo
-        echo "0.  Volver al Menú Principal"
+        echo -e "\e[1;39m  0.  Volver al Menú Principal\e[0m"
 		echo
-        echo "========================"
+        echo -e "\e[1;39m==================================================\e[0m"
 		echo
-        read -p "Ingrese una opción (0-10): " opcionnmap
+        read -p "\e[1;39mIngrese una opción (0-10): \e[0m" opcionnmap
 
 }
 
