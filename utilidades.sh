@@ -69,7 +69,7 @@ show_menu() {
 	echo -e
     echo -e "======================================${RESET}"
 	echo
-    read -p $'\e[1;32mIngrese una opción (0-11): \e[0m' opcion
+    read -p $'\e[1;32mIngrese una opción (0-10): \e[0m' opcion
 }
 
 # Función para manejar la opción 1
